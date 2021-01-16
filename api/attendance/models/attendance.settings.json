@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "attendances",
+  "info": {
+    "name": "attendance"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "student": {
+      "model": "student",
+      "via": "attendances"
+    },
+    "group": {
+      "model": "group",
+      "via": "attendances"
+    },
+    "date": {
+      "type": "datetime",
+      "required": true
+    }
+  }
+}

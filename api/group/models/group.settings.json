@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "groups",
+  "info": {
+    "name": "Group"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "teacher": {
+      "model": "teacher",
+      "via": "groups"
+    },
+    "students": {
+      "via": "groups",
+      "collection": "student"
+    },
+    "attendances": {
+      "via": "group",
+      "collection": "attendance"
+    }
+  }
+}
