@@ -78,10 +78,6 @@
     "groups": {
       "collection": "group",
       "via": "teacher"
-    },
-    "inviteToken": {
-      "type": "string",
-      "private": true
     }
   }
 }
