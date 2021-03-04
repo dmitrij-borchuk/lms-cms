@@ -17,10 +17,6 @@
     "description": {
       "type": "text"
     },
-    "teacher": {
-      "model": "teacher",
-      "via": "groups"
-    },
     "students": {
       "via": "groups",
       "collection": "student"
@@ -28,6 +24,11 @@
     "attendances": {
       "via": "group",
       "collection": "attendance"
+    },
+    "teacher": {
+      "via": "groups",
+      "plugin": "users-permissions",
+      "model": "user"
     }
   }
 }
